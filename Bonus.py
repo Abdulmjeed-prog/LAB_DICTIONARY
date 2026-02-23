@@ -32,7 +32,6 @@ def query_city(weather):
         print(f"  {date}: {data['temperature']}°C, {data['humidity']}%, {data['condition']}")
 
 def update_weather(weather, city, date, new_data):
-    """Update specific weather data for a city/date."""
     if city in weather and date in weather[city]:
         weather[city][date].update(new_data)
         print(f"Updated {city} on {date}: {new_data}")
@@ -43,7 +42,7 @@ def delete_weather(weather, city, date):
     if city in weather and date in weather[city]:
         del weather[city][date]
         print(f"✅ Deleted {city} on {date}")
-        if not weather[city]:  # Clean empty city
+        if not weather[city]:
             del weather[city]
     else:
         print(f"City '{city}' or date '{date}' not found.")
