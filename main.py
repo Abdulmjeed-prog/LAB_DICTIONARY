@@ -1,0 +1,17 @@
+phone_numbers = {
+    "0568323222": "Amal",
+    "0522222232": "Mohammed",
+    "0532335983": "Khadijah",
+    "0545341144": "Abdullah",
+    "0545534556": "Rawan",
+    "0560664566": "Faisal",
+    "0567917077": "Layla"
+}
+
+number = input("Enter the number: ")
+if len(number) != 10 or not number.isdigit():
+    print("This is invalid number")
+elif number in phone_numbers:
+    print(phone_numbers[number])
+else:
+    print("Sorry, the number is not found")
