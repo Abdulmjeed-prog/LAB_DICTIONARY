@@ -41,7 +41,7 @@ def update_weather(weather, city, date, new_data):
 def delete_weather(weather, city, date):
     if city in weather and date in weather[city]:
         del weather[city][date]
-        print(f"✅ Deleted {city} on {date}")
+        print(f"Deleted {city} on {date}")
         if not weather[city]:
             del weather[city]
     else:
